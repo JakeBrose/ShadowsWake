@@ -1,0 +1,14 @@
+{
+  "users": [
+    {
+      "first_name": "",
+      "last_name": "",
+      "username": "",
+      "email": "",
+      "password": "",
+      "wins": 0,
+      "losses": 0,
+      "last_login": 0
+    }
+  ]
+}
