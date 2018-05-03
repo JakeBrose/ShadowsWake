@@ -8,7 +8,7 @@ const {
   register,
   displayLogin,
   login,
-  welcome,
+  profile,
   logout
 } = require("../controllers/authCtrl.js");
 
@@ -20,7 +20,7 @@ router.post("/register", register);
 router.get("/login", displayLogin);
 router.post("/login", login);
 
-router.get("/welcome", isLoggedIn, welcome);
+router.get("/profile", isLoggedIn, profile);
 router.post("/logout", logout);
 
 // We add this to the welcome route as an additional step to take before calling
