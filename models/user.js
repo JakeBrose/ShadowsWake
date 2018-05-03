@@ -12,7 +12,9 @@ module.exports = function(sequelize, DataTypes) {
   }, {timestamps: true, tableName: 'users'});
 
   User.associate= (models) => {
-
+    User.hasMany(models.Character, {
+      foreignKey: "userId"
+    })
   };
 
   return User;
