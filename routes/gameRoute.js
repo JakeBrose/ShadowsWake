@@ -14,10 +14,14 @@ const {
   addNewCharacter
 } = require("../controllers/characterCtrl");
 
-const { getFirstEnemy } = require("../controllers/enemyCtrl");
+const {
+  getFirstEnemy,
+  createOrcSkirmisher
+} = require("../controllers/enemyCtrl");
 
 router.get("/newGame" , newGame);
 router.post("/newGame" , addNewCharacter);
+router.post("/generateOrcSkirmisher", createOrcSkirmisher);
 router.get("/chapterOne", myCurrentCharacter, chapterOne);
 router.get("/chapterOneA", myCurrentCharacter, chapterOneA);
 router.get("/chapterOneBattle", myCurrentCharacter, getFirstEnemy, chapterOneBattle);

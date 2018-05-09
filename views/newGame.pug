@@ -30,14 +30,14 @@ html
       h3 Easy
         br
         label Vigor
-        input(type="text" name="vigor"  value="6" readonly)
-        br
+          input(type="text" name="vigor"  value="6" readonly)
+          br
         label Fight
-        input(type="text" name="fight" value="6" readonly)
-        br
+          input(type="text" name="fight" value="6" readonly)
+          br
         label Armor
-        input(type="text" name="armor" value="6" readonly)
-        br
+          input(type="text" name="armor" value="6" readonly)
+          br
         button.edit-submit(type="submit") Select
     form.selectDifficulty(name="selectDifficultyMedium" method="POST" action="/newGame")
       h3 Medium
@@ -65,6 +65,8 @@ html
         input(type="text" name="armor" value="4" readonly)
         br
         button.edit-submit(type="submit") Select
-    ul
-      li
-        a(href="/chapterOne") Continue..
+    form.selectDifficulty(name="generateEnemies" method="POST" action="/generateOrcSkirmisher")
+      input(type="hidden" name="vigor"  value="5" readonly)
+      input(type="hidden" name="fight" value="3" readonly)
+      input(type="hidden" name="armor" value="4" readonly)
+      button.edit-submit(type="submit") New Game

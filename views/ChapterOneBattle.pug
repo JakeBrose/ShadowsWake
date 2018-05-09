@@ -7,3 +7,13 @@ html
       li= `Vigor:${characterData.vigor}`
       li= `Fight:${characterData.fight}`
       li= `Armor:${characterData.armor}`
+      button#fight(type="submit") Fight!
+
+    ul.enemy
+      li= enemyData.name
+      li= `Vigor:${enemyData.vigor}`
+      li= `Fight:${enemyData.fight}`
+      li= `Armor:${enemyData.armor}`
+
+    script
+      include ../client/battleOne.js

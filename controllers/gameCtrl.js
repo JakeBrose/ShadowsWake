@@ -18,5 +18,5 @@ module.exports.chapterOneA = (req, res) => {
 module.exports.chapterOneBattle = (req, res) => {
   let characterData = res.locals.character;
   let enemyData = res.locals.enemy;
-  res.render("ChapterOneBattle", { characterData }, { enemyData });
+  res.render("ChapterOneBattle", { characterData, enemyData });
 };
