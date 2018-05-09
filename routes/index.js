@@ -11,5 +11,6 @@ router.get('/', (req, res, next) => {
 router.use(require("./authRoute"));
 router.use(require("./profileRoute"));
 router.use(require("./characterRoute"));
+router.use(require("./gameRoute"));
 
 module.exports = router;

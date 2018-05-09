@@ -1,0 +1,28 @@
+{
+  "enemies": [
+    {
+      "name": "Orc Skirmisher",
+      "vigor": 1,
+      "fight": 2,
+      "armor": 2
+    },
+    {
+      "name": "Fell Warg",
+      "vigor": 2,
+      "fight": 3,
+      "armor": 2
+    },
+    {
+      "name": "Orc Captain",
+      "vigor": 3,
+      "fight": 3,
+      "armor": 4
+    },
+    {
+      "name": "The Dwimmerlaik",
+      "vigor": 4,
+      "fight": 4,
+      "armor": 5
+    }
+  ]
+}

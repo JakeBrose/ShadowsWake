@@ -9,7 +9,7 @@ module.exports = function(sequelize, DataTypes) {
     wins: DataTypes.INTEGER,
     losses: DataTypes.INTEGER,
     last_login: DataTypes.INTEGER,
-  }, {timestamps: true, tableName: 'users'});
+  }, {timestamps: false, tableName: 'users'});
 
   User.associate= (models) => {
     User.hasMany(models.Character, {

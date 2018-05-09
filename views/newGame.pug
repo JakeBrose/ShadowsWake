@@ -1,0 +1,70 @@
+doctype html
+html
+  head
+    title Prologue
+    p
+      | It has been nigh two months since Ohtar, squire of Isildur, arrived in Imladris bearing the shards of Narsil.
+      |With him came word of the ambush on Isildur’s retinue by a large party of hunting orcs from the Misty Mountains.
+      |Ohtar knew not of Isildur’s fate, nor of that of his sons. Once this news has reached Annuminas in Eriador,
+      |a party of nine Dunedain departed in search of the high king.  Ohtar had begged the council to allow him to travel
+      |with the party, but his journey had taken too great a toll on him and of this the council was aware. He had already
+      |proved a worthy squire to his king, they assured him.
+      | On the twenty-third day of Girithron, the party at last reached
+      |the northern border of the Gladden Fields where Isildur had been waylaid. By this time the elements had taken quite
+      |the toll on the dead, both men and orc alike. “Gortheb”, a grey haired ranger muttered under his breath. “Aen cerir
+      |neledh edenedair tham”, said another as he knelt down next a corpse of a man. Though the man’s garments were weathered,
+      |the ranger could tell by their quality that they belonged to one of the house of the king—though he could not say precisely who.
+      |There were two more amongst the fallen who bore clothing of similar quality. After a time, the party came to the conclusion
+      |that they must be Elendur, Aratan, and Ciryon, the three eldest sons of Isildur. This was a grave discovery indeed
+      |and as they prepared the bodies for the journey back to Annuminas, they wept.
+      | The party travelled south along the Anduin for a day and a half when they decided to make camp. They felt that
+      |they were close enough to the border of Lorien to risk resting for a few hours. It was then that they were attacked.
+      |A patrol of orcs and wargs had come upon their scent, and tracked them for a day. By the time the two scouts
+      |discovered their pursuers, it was too late. They were overwhelmed, though their demise was not in vain. The sound
+      |of steel singing and orcs crying out made its way to the camp and the  party quickly readied themselves. The orcs, having
+      |slain the scouts quickly made their way toward the camp. By the time they arrived, however, the rangers were nowhere to be seen.
+      |Then, seemingly out of nowhere, arrows rained down upon the orcs, slaying many. The dunedain charged the orcs and the sound
+      |of swords and scimitars clashing rang into the evening as the blood red sky slowly faded to black...
+  div
+    form.selectDifficulty(name="selectDifficultyEasy" method="POST" action="/newGame")
+      h3 Easy
+        br
+        label Vigor
+        input(type="text" name="vigor"  value="6" readonly)
+        br
+        label Fight
+        input(type="text" name="fight" value="6" readonly)
+        br
+        label Armor
+        input(type="text" name="armor" value="6" readonly)
+        br
+        button.edit-submit(type="submit") Select
+    form.selectDifficulty(name="selectDifficultyMedium" method="POST" action="/newGame")
+      h3 Medium
+        br
+        label Vigor
+        input(type="text" name="vigor"  value="6" readonly)
+        br
+        label Fight
+        input(type="text" name="fight" value="4" readonly)
+        br
+        label Armor
+        input(type="text" name="armor" value="5" readonly)
+        br
+        button.edit-submit(type="submit") Select
+    form.selectDifficulty(name="selectDifficultyHard" method="POST" action="/newGame")
+      h3 Hard
+        br
+        label Vigor
+        input(type="text" name="vigor"  value="5" readonly)
+        br
+        label Fight
+        input(type="text" name="fight" value="3" readonly)
+        br
+        label Armor
+        input(type="text" name="armor" value="4" readonly)
+        br
+        button.edit-submit(type="submit") Select
+    ul
+      li
+        a(href="/chapterOne") Continue..
