@@ -39,4 +39,4 @@ module.exports.addNewCharacter = (req, res) => {
   } else {
     res.render('login');
   }
-}
+};

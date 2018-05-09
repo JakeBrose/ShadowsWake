@@ -1,12 +1,23 @@
 
 'use strict';
 
+
+///////////////////////////////////////////////////////////
+//      Gets individual enemies                         //
+/////////////////////////////////////////////////////////
 module.exports.getFirstEnemy = (req, res, next) => {
   const { Enemy } = req.app.get("models");
+  let user = req.app.get("user");
   Enemy.findOne({
     where:{
-      id: 1
-    }
+      name: "Orc Skirmisher",
+      userId: user.id
+    },
+    order: [
+      [
+        'updatedAt', 'DESC'
+      ]
+    ]
   })
     .then((foundEnemy) => {
       res.locals.enemy = foundEnemy.dataValues;
@@ -14,41 +25,102 @@ module.exports.getFirstEnemy = (req, res, next) => {
     });
 };
 
-module.exports.getSecondEnemy = (req, res, next) => {
-  const { Enemy } = req.app.get("models");
-  Enemy.findOne({
-    where:{
-      id: 2
-    }
-  })
-    .then((foundEnemy) => {
-      res.locals.enemy = foundEnemy.dataValues;
-      return next()
-    });
+
+///////////////////////////////////////////////////////////
+//      POST NEW ENEMIES                                //
+/////////////////////////////////////////////////////////
+module.exports.createOrcSkirmisher = (req, res) => {
+  let { Enemy } = req.app.get('models');
+  let user = req.app.get("user");
+  let {...newEnemy} = req.body;
+  if (user) {
+    newEnemy.name = "Orc Skirmisher";
+    newEnemy.vigor = +newEnemy.vigor;
+    newEnemy.fight = +newEnemy.fight;
+    newEnemy.armor = +newEnemy.armor;
+    newEnemy.userId = user.id;
+    Enemy.create(newEnemy)
+      .then(enemy => {
+        const { id } = enemy.get({plain:true});
+        res.redirect("/chapterOne")
+      })
+      .catch(err => {
+        console.log("ERROR: ", err);
+      });
+  } else {
+    res.render('login');
+  }
 };
 
-module.exports.getThirdEnemy = (req, res, next) => {
-  const { Enemy } = req.app.get("models");
-  Enemy.findOne({
-    where:{
-      id: 3
-    }
-  })
-    .then((foundEnemy) => {
-      res.locals.enemy = foundEnemy.dataValues;
-      return next()
-    });
+module.exports.createFellWarg = (req, res) => {
+  let { Enemy } = req.app.get('models');
+  let user = req.app.get("user");
+  let {...newEnemy} = req.body;
+  if (user) {
+    newEnemy.name = "Fell Warg";
+    newEnemy.vigor = +newEnemy.vigor;
+    newEnemy.fight = +newEnemy.fight;
+    newEnemy.armor = +newEnemy.armor;
+    newEnemy.userId = user.id;
+    Enemy.create(newEnemy)
+      .then(enemy => {
+        const { id } = enemy.get({plain:true});
+        res.redirect("/chapterOne")
+      })
+      .catch(err => {
+        console.log("ERROR: ", err);
+      });
+  } else {
+    res.render('login');
+  }
 };
 
-module.exports.getFinalEnemy = (req, res, next) => {
-  const { Enemy } = req.app.get("models");
-  Enemy.findOne({
-    where:{
-      id: 4
-    }
-  })
-    .then((foundEnemy) => {
-      res.locals.enemy = foundEnemy.dataValues;
-      return next()
-    });
+module.exports.createOrcCaptain = (req, res) => {
+  let { Enemy } = req.app.get('models');
+  let user = req.app.get("user");
+  let {...newEnemy} = req.body;
+  if (user) {
+    newEnemy.name = "Orc Captain";
+    newEnemy.vigor = +newEnemy.vigor;
+    newEnemy.fight = +newEnemy.fight;
+    newEnemy.armor = +newEnemy.armor;
+    newEnemy.userId = user.id;
+    Enemy.create(newEnemy)
+      .then(enemy => {
+        const { id } = enemy.get({plain:true});
+        res.redirect("/chapterOne")
+      })
+      .catch(err => {
+        console.log("ERROR: ", err);
+      });
+  } else {
+    res.render('login');
+  }
 };
+
+module.exports.createTheDwimmerlaik = (req, res) => {
+  let { Enemy } = req.app.get('models');
+  let user = req.app.get("user");
+  let {...newEnemy} = req.body;
+  if (user) {
+    newEnemy.name = "The Dwimmerlaik";
+    newEnemy.vigor = +newEnemy.vigor;
+    newEnemy.fight = +newEnemy.fight;
+    newEnemy.armor = +newEnemy.armor;
+    newEnemy.userId = user.id;
+    Enemy.create(newEnemy)
+      .then(enemy => {
+        const { id } = enemy.get({plain:true});
+        res.redirect("/chapterOne")
+      })
+      .catch(err => {
+        console.log("ERROR: ", err);
+      });
+  } else {
+    res.render('login');
+  }
+};
+
+///////////////////////////////////////////////////////////
+//      Update Enemy Key/Values                         //
+/////////////////////////////////////////////////////////

@@ -5,6 +5,12 @@ module.exports = function(sequelize, DataTypes) {
     vigor: DataTypes.INTEGER,
     fight: DataTypes.INTEGER,
     armor: DataTypes.INTEGER,
-  }, {timestamps: false, tableName: 'enemies'});
+  }, {timestamps: true, tableName: 'enemies'});
+
+  Enemy.associate= (models) => {
+    Enemy.belongsTo(models.User, {
+      foreignKey: "userId"
+    })
+  };
   return Enemy;
 };
