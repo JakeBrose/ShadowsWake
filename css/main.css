@@ -1,0 +1,12 @@
+
+/*Constant Background*/
+
+.background {
+    background-image: url("images/oldTv.png");
+    background-repeat: no-repeat;
+    background-color: black;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}

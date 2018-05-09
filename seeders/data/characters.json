@@ -1,0 +1,11 @@
+{
+  "characters": [
+    {
+      "name": "Aragorn",
+      "vigor": 6,
+      "fight": 6,
+      "armor": 6,
+      "win": 0
+    }
+  ]
+}

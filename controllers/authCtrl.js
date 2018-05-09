@@ -59,8 +59,8 @@ module.exports.login = (req, res, next) => {
   })(req, res, next);
 };
 
-module.exports.profile = (req, res, next) => {
-  res.render('profile');
+module.exports.welcome = (req, res, next) => {
+  res.render('welcome');
 };
 
 // logging out
