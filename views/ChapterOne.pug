@@ -2,12 +2,14 @@ doctype html
 html
   head
     title Chapter One
+    include stylesheet
+    body.background
     ul.character
-      li The Dunedain
+      li The Ashen One
       li= `Vigor:${characterData.vigor}`
       li= `Fight:${characterData.fight}`
       li= `Armor:${characterData.armor}`
-    p
+    p.gameText
       | You wake in a fugue of pain and disorientation. The last thing you remember was being charged by an warg rider.
       |You attempt to get up, but a sharp pain in your shoulder prevents your from doing so. You clench your mouth in fear
       |of making too much noise. The orcs most likley think you perished in the ambush, and you don’t want to give them

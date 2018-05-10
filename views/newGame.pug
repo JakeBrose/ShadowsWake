@@ -1,8 +1,10 @@
 doctype html
 html
   head
+    include stylesheet
+    body.background
     title Prologue
-    p
+    p.gameText
       | It has been nigh two months since Ohtar, squire of Isildur, arrived in Imladris bearing the shards of Narsil.
       |With him came word of the ambush on Isildur’s retinue by a large party of hunting orcs from the Misty Mountains.
       |Ohtar knew not of Isildur’s fate, nor of that of his sons. Once this news has reached Annuminas in Eriador,
@@ -25,7 +27,7 @@ html
       |slain the scouts quickly made their way toward the camp. By the time they arrived, however, the rangers were nowhere to be seen.
       |Then, seemingly out of nowhere, arrows rained down upon the orcs, slaying many. The dunedain charged the orcs and the sound
       |of swords and scimitars clashing rang into the evening as the blood red sky slowly faded to black...
-  div
+  div.formText
     form.selectDifficulty(name="selectDifficultyEasy" method="POST" action="/newGame")
       h3 Easy
         br
@@ -66,7 +68,7 @@ html
         br
         button.edit-submit(type="submit") Select
     form.selectDifficulty(name="generateEnemies" method="POST" action="/generateOrcSkirmisher")
-      input(type="hidden" name="vigor"  value="6" readonly)
-      input(type="hidden" name="fight" value="6" readonly)
-      input(type="hidden" name="armor" value="6" readonly)
+      input(type="hidden" name="vigor"  value="1" readonly)
+      input(type="hidden" name="fight" value="2" readonly)
+      input(type="hidden" name="armor" value="2" readonly)
       button.edit-submit(type="submit") New Game

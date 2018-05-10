@@ -1,12 +1,79 @@
 
-/*Constant Background*/
 
+/*Fonts*/
+@font-face {
+    font-family: 'ringbearermedium';
+    src: url('../css/fonts/lotrFont/ringbearer.medium-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/*Constant Background*/
 .background {
-    background-image: url("images/oldTv.png");
-    background-repeat: no-repeat;
-    background-color: black;
-    -webkit-background-size: cover;
+    background:
+            url("http://img1.joyreactor.com/pics/post/full/pixel-art-sword-sandbox-gif-3054657.gif") no-repeat center center fixed;
+    background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
+    -webkit-background-size: cover;
+}
+
+/* login styling*/
+.container.landing {
+    text-align: center;
+    padding-right: 17%;
+    padding-top: 10%;
+    font-family: 'Press Start 2P', cursive;
+}
+.loginPage {
+    text-align: center;
+    padding-right: 17%;
+    padding-top: 10%;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.superTitle {
+    text-align: center;
+    font-size: 60px;
+    color: goldenrod;
+    padding-right: 15%;
+    padding-top: 10%;
+    font-family: 'Press Start 2P', cursive;
+}
+
+
+/*text styling*/
+.gameText {
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    font-size: 10px;
+    background-color: hsla(50, 33%, 25%, .75);
+    text-align: center;
+}
+.formText {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    text-align: center;
+}
+
+/*character styling*/
+.character {
+    height: 250px;
+    width: 200px;
+    background:
+        url("https://orig00.deviantart.net/84ac/f/2016/077/6/2/dark_souls_3___red_knight_by_zedotagger-d9vknnd.gif") no-repeat;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    background-color: burlywood;
+}
+.enemy {
+    height: 250px;
+    width: 200px;
+    background:
+            url("https://78.media.tumblr.com/tumblr_lknef5fxc81qf91leo1_500.gif") no-repeat;
+    background-size: 150px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    background-color: burlywood;
+    text-align: end;
 }
