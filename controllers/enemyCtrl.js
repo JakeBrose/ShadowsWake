@@ -65,7 +65,7 @@ module.exports.createFellWarg = (req, res) => {
     Enemy.create(newEnemy)
       .then(enemy => {
         const { id } = enemy.get({plain:true});
-        res.redirect("/chapterOne")
+        res.redirect("/gameBattle")
       })
       .catch(err => {
         console.log("ERROR: ", err);
@@ -88,7 +88,7 @@ module.exports.createOrcCaptain = (req, res) => {
     Enemy.create(newEnemy)
       .then(enemy => {
         const { id } = enemy.get({plain:true});
-        res.redirect("/chapterOne")
+        res.redirect("/gameBattle")
       })
       .catch(err => {
         console.log("ERROR: ", err);
@@ -111,7 +111,7 @@ module.exports.createTheDwimmerlaik = (req, res) => {
     Enemy.create(newEnemy)
       .then(enemy => {
         const { id } = enemy.get({plain:true});
-        res.redirect("/chapterOne")
+        res.redirect("/gameBattle")
       })
       .catch(err => {
         console.log("ERROR: ", err);
@@ -121,6 +121,3 @@ module.exports.createTheDwimmerlaik = (req, res) => {
   }
 };
 
-///////////////////////////////////////////////////////////
-//      Update Enemy Key/Values                         //
-/////////////////////////////////////////////////////////
