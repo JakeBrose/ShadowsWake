@@ -7,7 +7,9 @@ html
       li= `Vigor:${characterData.vigor}`
       li= `Fight:${characterData.fight}`
       li= `Armor:${characterData.armor}`
-      button#fight(type="submit") Fight!
+
+    form.selectDifficulty(name="battleResults" method="GET" action="/battle")
+      button.edit-submit(type="submit") Fight it out!
 
     ul.enemy
       li= enemyData.name
@@ -15,5 +17,3 @@ html
       li= `Fight:${enemyData.fight}`
       li= `Armor:${enemyData.armor}`
 
-    script
-      include ../client/battleOne.js
