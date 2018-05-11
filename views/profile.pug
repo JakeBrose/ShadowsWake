@@ -1,8 +1,8 @@
 extends index.pug
 
 block content
-  include welcome
-  div
+
+  div.profile
     ul
       h1 Player Profile
       li= `Name: ${userData.first_name} ${userData.last_name}`
@@ -10,7 +10,7 @@ block content
       li= `Email: ${userData.email}`
       li= `Wins: ${userData.wins}`
       li= `Losses: ${userData.losses}`
-  div
+  div.profile
     ul
       li
         a(href="/newGame") Begin your adventure!

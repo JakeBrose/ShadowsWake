@@ -40,7 +40,7 @@ module.exports.battle = (req, res) => {
       })
       .then(() => {
         if (charVigor === 0) {
-          res.redirect("/character-death")
+          res.redirect("/characterDeath")
         } else {
           res.redirect("back")
         }

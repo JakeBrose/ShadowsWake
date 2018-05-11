@@ -31,44 +31,44 @@ html
     form.selectDifficulty(name="selectDifficultyEasy" method="POST" action="/newGame")
       h3 Easy
         br
-        label Vigor
+        label WR
           input(type="text" name="vigor"  value="6" readonly)
           br
-        label Fight
+        label FS
           input(type="text" name="fight" value="6" readonly)
           br
-        label Armor
+        label AV
           input(type="text" name="armor" value="6" readonly)
           br
         button.edit-submit(type="submit") Select
     form.selectDifficulty(name="selectDifficultyMedium" method="POST" action="/newGame")
       h3 Medium
         br
-        label Vigor
+        label WR
         input(type="text" name="vigor"  value="6" readonly)
         br
-        label Fight
+        label FS
         input(type="text" name="fight" value="4" readonly)
         br
-        label Armor
+        label AV
         input(type="text" name="armor" value="5" readonly)
         br
         button.edit-submit(type="submit") Select
     form.selectDifficulty(name="selectDifficultyHard" method="POST" action="/newGame")
       h3 Hard
         br
-        label Vigor
+        label WS
         input(type="text" name="vigor"  value="5" readonly)
         br
-        label Fight
+        label FS
         input(type="text" name="fight" value="3" readonly)
         br
-        label Armor
+        label AR
         input(type="text" name="armor" value="4" readonly)
         br
         button.edit-submit(type="submit") Select
-    form.selectDifficulty(name="generateEnemies" method="POST" action="/generateOrcSkirmisher")
-      input(type="hidden" name="vigor"  value="1" readonly)
+    form.firstEnemyGenerator(name="generateEnemies" method="POST" action="/generateOrcSkirmisher")
+      input(type="hidden" name="vigor"  value="8" readonly)
       input(type="hidden" name="fight" value="2" readonly)
       input(type="hidden" name="armor" value="2" readonly)
       button.edit-submit(type="submit") New Game

@@ -20,3 +20,31 @@ module.exports.chapterOneBattle = (req, res) => {
   let enemyData = res.locals.enemy;
   res.render("ChapterOneBattle", { characterData, enemyData });
 };
+
+module.exports.battleVictory = (req, res) => {
+  let characterData = res.locals.character;
+  res.render("battleVictory", { characterData });
+};
+
+// Chapter Two //
+
+module.exports.chapterTwo = (req, res) => {
+  let characterData = res.locals.character;
+  res.render("ChapterTwo", { characterData });
+};
+
+module.exports.chapterTwoA = (req, res) => {
+  let characterData = res.locals.character;
+  res.render("ChapterTwoA", { characterData });
+};
+
+module.exports.chapterTwoBattle = (req, res) => {
+  let characterData = res.locals.character;
+  let enemyData = res.locals.enemy;
+  res.render("ChapterTwoBattle", { characterData, enemyData });
+};
+
+module.exports.battleVictoryTwo = (req, res) => {
+  let characterData = res.locals.character;
+  res.render("battleVictoryTwo", { characterData });
+};

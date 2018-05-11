@@ -5,17 +5,17 @@ html
     include stylesheet
     body.background
     ul.character
-      li The Dunedain
-      li= `Vigor:${characterData.vigor}`
-      li= `Fight:${characterData.fight}`
-      li= `Armor:${characterData.armor}`
+      li The Ashen One
+      li= `WR:${characterData.vigor}`
+      li= `FS:${characterData.fight}`
+      li= `AV:${characterData.armor}`
 
     form.selectDifficulty(name="battleResults" method="GET" action="/battle")
       button.edit-submit(type="submit") Fight it out!
 
     ul.enemy
       li= enemyData.name
-      li= `Vigor:${enemyData.vigor}`
-      li= `Fight:${enemyData.fight}`
-      li= `Armor:${enemyData.armor}`
+      li= `WR:${enemyData.vigor}`
+      li= `FS:${enemyData.fight}`
+      li= `AV:${enemyData.armor}`
 

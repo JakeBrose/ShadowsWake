@@ -1,11 +1,19 @@
 doctype html
 html
   head
-    title Chapter One Continued
+    title victory
+    include stylesheet
+  body.backgroundVictory
     ul.character
-      li The Dunedain
-      li= `Vigor:${characterData.vigor}`
-      li= `Fight:${characterData.fight}`
-      li= `Armor:${characterData.armor}`
+      li The Ashen One
+      li= `WR:${characterData.vigor}`
+      li= `FS:${characterData.fight}`
+      li= `AV:${characterData.armor}`
 
-    h1 You faced your foe and smote his ruin upon the earth!
+    h1.superTitle Victory Achieved
+
+    form.firstEnemyGenerator(name="generateEnemies" method="POST" action="/generateSecondEnemy")
+      input(type="hidden" name="vigor"  value="7" readonly)
+      input(type="hidden" name="fight" value="3" readonly)
+      input(type="hidden" name="armor" value="3" readonly)
+      button.edit-submit(type="submit") Continue to Chapter 2
