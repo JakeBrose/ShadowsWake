@@ -27,6 +27,7 @@ module.exports.addNewCharacter = (req, res) => {
     newCharacter.vigor = +newCharacter.vigor;
     newCharacter.fight = +newCharacter.fight;
     newCharacter.armor = +newCharacter.armor;
+    newCharacter.win = 0;
     newCharacter.userId = user.id;
     Character.create(newCharacter)
       .then(character => {
@@ -57,9 +58,14 @@ module.exports.youWin = (req, res, next) => {
     .then(character => {
     return character.increment('win', {by:1})
     })
-      .then((foundCharacter) => {
-        res.locals.character = foundCharacter.dataValues;
+      .then(() => {
+        res.redirect("/profile");
         return next()
       });
 };
+
+module.exports.death = (req, res, next) => {
+  res.redirect("/profile")
+}
+
 

@@ -3,7 +3,7 @@ html
   head
     title Skirmish
     include stylesheet
-    body.background
+    body.backgroundThree
     ul.character
       li The Ashen One
       li= `WR:${characterData.vigor}`
@@ -13,7 +13,7 @@ html
     form.selectDifficulty(name="battleResults" method="GET" action="/battleThree")
       button.edit-submit(type="submit") Fight it out!
 
-    ul.enemyTwo
+    ul.enemyThree
       li= enemyData.name
       li= `WR:${enemyData.vigor}`
       li= `FS:${enemyData.fight}`

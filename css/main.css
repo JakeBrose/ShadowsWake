@@ -17,6 +17,24 @@
     -o-background-size: cover;
     -webkit-background-size: cover;
 }
+
+.backgroundTwo {
+    background:
+            url("https://i.imgur.com/yTKX7op.gif") no-repeat center center fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+}
+
+.backgroundThree {
+    background:
+            url("http://i.imgur.com/vU3JTB6.gif") no-repeat center center fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+}
 .backgroundVictory {
     background:
             url("http://i0.kym-cdn.com/photos/images/newsfeed/001/315/787/15c.gif") no-repeat center center fixed;
@@ -111,6 +129,17 @@
     width: 200px;
     background:
             url("https://orig00.deviantart.net/fc49/f/2017/164/1/0/the_pursuer_by_daghosttoast-dbcl73g.gif") no-repeat;
+    background-size: 150px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    background-color: hsla(50, 33%, 25%, .75);
+    text-align: end;
+}
+.enemyThree {
+    height: 250px;
+    width: 200px;
+    background:
+            url("https://orig00.deviantart.net/589d/f/2015/234/d/5/dark_souls___gravelord_nito_by_zedotagger-d96sgi8.gif") no-repeat;
     background-size: 150px;
     font-family: 'Press Start 2P', cursive;
     font-size: 10px;

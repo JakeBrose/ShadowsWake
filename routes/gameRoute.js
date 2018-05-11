@@ -15,12 +15,14 @@ const {
   chapterThree,
   chapterThreeA,
   chapterThreeBattle,
-  battleVictoryThree
+  battleVictoryThree,
+  death
 } = require("../controllers/gameCtrl");
 
 const {
   myCurrentCharacter,
-  addNewCharacter
+  addNewCharacter,
+  youWin
 } = require("../controllers/characterCtrl");
 
 const {
@@ -58,5 +60,9 @@ router.get("/chapterThreeA", myCurrentCharacter, chapterThreeA);
 router.get("/chapterThreeBattle", myCurrentCharacter, getThirdEnemy, chapterThreeBattle);
 router.get("/battleThree", myCurrentCharacter, getThirdEnemy, battle);
 router.get("/battleVictoryThree", myCurrentCharacter, battleVictoryThree);
+// win/lose //
+router.get("/characterDeath", myCurrentCharacter, death);
+router.post("/incrementWins",myCurrentCharacter, youWin);
+router.post("/incrementLoss",myCurrentCharacter, death);
 
 module.exports = router;
