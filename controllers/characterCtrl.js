@@ -40,3 +40,26 @@ module.exports.addNewCharacter = (req, res) => {
     res.render('login');
   }
 };
+
+module.exports.youWin = (req, res, next) => {
+  const user = req.app.get("user");
+  const { Character } = req.app.get("models");
+  Character.findOne({
+    where:{
+      userId: user.id
+    },
+    order: [
+      [
+        'updatedAt', 'DESC'
+      ]
+    ]
+  })
+    .then(character => {
+    return character.increment('win', {by:1})
+    })
+      .then((foundCharacter) => {
+        res.locals.character = foundCharacter.dataValues;
+        return next()
+      });
+};
+

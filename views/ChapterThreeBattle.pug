@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    title Skirmish
+    include stylesheet
+    body.background
+    ul.character
+      li The Ashen One
+      li= `WR:${characterData.vigor}`
+      li= `FS:${characterData.fight}`
+      li= `AV:${characterData.armor}`
+
+    form.selectDifficulty(name="battleResults" method="GET" action="/battleThree")
+      button.edit-submit(type="submit") Fight it out!
+
+    ul.enemyTwo
+      li= enemyData.name
+      li= `WR:${enemyData.vigor}`
+      li= `FS:${enemyData.fight}`
+      li= `AV:${enemyData.armor}`

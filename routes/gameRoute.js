@@ -8,7 +8,14 @@ const {
   chapterOneA,
   chapterOneBattle,
   battleVictory,
-  chapterTwo
+  chapterTwo,
+  chapterTwoA,
+  chapterTwoBattle,
+  battleVictoryTwo,
+  chapterThree,
+  chapterThreeA,
+  chapterThreeBattle,
+  battleVictoryThree
 } = require("../controllers/gameCtrl");
 
 const {
@@ -20,7 +27,9 @@ const {
   getFirstEnemy,
   createFirstEnemy,
   createSecondEnemy,
-  getSecondEnemy
+  getSecondEnemy,
+  createThirdEnemy,
+  getThirdEnemy
 } = require("../controllers/enemyCtrl");
 
 const { battle } = require("../controllers/battleCtrl");
@@ -40,6 +49,14 @@ router.post("/generateSecondEnemy",createSecondEnemy);
 router.get("/chapterTwo", myCurrentCharacter, chapterTwo);
 router.get("/chapterTwoA", myCurrentCharacter, chapterTwoA);
 router.get("/chapterTwoBattle", myCurrentCharacter, getSecondEnemy, chapterTwoBattle);
-router.get("/battle", myCurrentCharacter, getSecondEnemy, battle);
+router.get("/battleTwo", myCurrentCharacter, getSecondEnemy, battle);
+router.get("/battleVictoryTwo", myCurrentCharacter, battleVictoryTwo);
+// Chapter Three
+router.post("/generateThirdEnemy",createThirdEnemy);
+router.get("/chapterThree", myCurrentCharacter, chapterThree);
+router.get("/chapterThreeA", myCurrentCharacter, chapterThreeA);
+router.get("/chapterThreeBattle", myCurrentCharacter, getThirdEnemy, chapterThreeBattle);
+router.get("/battleThree", myCurrentCharacter, getThirdEnemy, battle);
+router.get("/battleVictoryThree", myCurrentCharacter, battleVictoryThree);
 
 module.exports = router;

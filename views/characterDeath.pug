@@ -1,0 +1,11 @@
+doctype html
+html
+  head
+    title victory
+    include stylesheet
+  body.backgroundLoss
+
+    h1.superTitle You Died
+
+    form.firstEnemyGenerator(name="generateEnemies" method="POST" action="/incrementLoss")
+      button.edit-submit(type="submit") Continue

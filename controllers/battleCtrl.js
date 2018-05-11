@@ -14,6 +14,7 @@ module.exports.battle = (req, res) => {
 
   // set player character key/values to variables //
   let enemyId = enemyData.id;
+  console.log("enemy data", enemyData);
   let enemyVigor = enemyData.vigor;
   let enemyFight = enemyData.fight + (Math.floor(Math.random() * 6) + 1);
   let enemyArmor = enemyData.armor + (Math.floor(Math.random() * 6) + 1);
@@ -26,8 +27,12 @@ module.exports.battle = (req, res) => {
         return enemy.decrement('vigor', {by:1})
       })
         .then(() => {
-          if (enemyVigor === 0) {
+          if (enemyVigor === 0 && enemyData.name === "Orc Skirmisher") {
             res.redirect("/battleVictory")
+          } else if (enemyVigor === 0 && enemyData.name === "Fell Warg") {
+              res.redirect("/battleVictoryTwo")
+          } else if (enemyVigor === 0 && enemyData.name === "The Dwimmerlaik") {
+              res.redirect("/battleVictoryThree")
           } else {
             res.redirect("back")
           }

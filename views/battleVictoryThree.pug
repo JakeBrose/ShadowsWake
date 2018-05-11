@@ -12,8 +12,5 @@ html
 
     h1.superTitle Victory Achieved
 
-    form.firstEnemyGenerator(name="generateEnemies" method="POST" action="/generateSecondEnemy")
-      input(type="hidden" name="vigor"  value="7" readonly)
-      input(type="hidden" name="fight" value="3" readonly)
-      input(type="hidden" name="armor" value="3" readonly)
+    form.firstEnemyGenerator(name="generateEnemies" method="POST" action="/incrementWins")
       button.edit-submit(type="submit") Continue

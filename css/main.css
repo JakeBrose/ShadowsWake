@@ -105,3 +105,15 @@
     background-color: hsla(50, 33%, 25%, .75);
     text-align: end;
 }
+
+.enemyTwo {
+    height: 250px;
+    width: 200px;
+    background:
+            url("https://orig00.deviantart.net/fc49/f/2017/164/1/0/the_pursuer_by_daghosttoast-dbcl73g.gif") no-repeat;
+    background-size: 150px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    background-color: hsla(50, 33%, 25%, .75);
+    text-align: end;
+}
