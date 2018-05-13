@@ -1,6 +1,6 @@
 "use strict";
 
-module.exports.myProfileView = (req, res) => {
+module.exports.myProfileView = (req, res, next) => {
   const user = req.app.get("user");
   const { User } = req.app.get("models");
   User.findOne({
@@ -10,6 +10,9 @@ module.exports.myProfileView = (req, res) => {
   })
     .then((foundUser) => {
       let userData = foundUser.dataValues;
+      userData.wins = req.user.wins;
+      userData.losses = req.user.losses;
       res.render("profile", { userData });
+      return next();
     });
 };

@@ -44,6 +44,14 @@
     -webkit-background-size: cover;
 }
 
+.backgroundLoss {
+    background:
+            url("https://i.pinimg.com/originals/16/74/db/1674dbae45cd38f3d3b4c00dc8616bd7.gif") no-repeat center center fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+}
 /* login styling*/
 .container.landing {
     text-align: center;

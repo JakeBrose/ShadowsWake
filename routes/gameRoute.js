@@ -63,6 +63,6 @@ router.get("/battleVictoryThree", myCurrentCharacter, battleVictoryThree);
 // win/lose //
 router.get("/characterDeath", myCurrentCharacter, death);
 router.post("/incrementWins",myCurrentCharacter, youWin);
-router.post("/incrementLoss",myCurrentCharacter, death);
+
 
 module.exports = router;

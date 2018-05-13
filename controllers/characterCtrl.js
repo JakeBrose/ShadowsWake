@@ -64,8 +64,40 @@ module.exports.youWin = (req, res, next) => {
       });
 };
 
-module.exports.death = (req, res, next) => {
-  res.redirect("/profile")
-}
+module.exports.userWins = (req, res, next) => {
+  const user = req.app.get("user");
+  const { Character } = req.app.get("models");
+  Character.findAll({
+    where:{
+      win: 1,
+      userId: user.id
+    },
+    raw: true
+  })
+    .then(characters => {
+      console.log("AAHAHAHAHAHAHAHHAHAHAHAFUCK", characters);
+      req.user.wins = characters.length;
+      next(user.wins)
+    })
+    .catch()
+};
+
+module.exports.userLosses = (req, res, next) => {
+  const user = req.app.get("user");
+  const { Character } = req.app.get("models");
+  Character.findAll({
+    where:{
+      win: 0,
+      userId: user.id
+    },
+    raw: true
+  })
+    .then(characters => {
+      console.log("AAHAHAHAHAHAHAHHAHAHAHAFUCK", characters);
+      req.user.losses = characters.length;
+      next(user.losses)
+    })
+    .catch()
+};
 
 
