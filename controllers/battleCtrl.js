@@ -1,6 +1,7 @@
 
 'use strict';
 
+
 module.exports.battle = (req, res) => {
   // access res.locals and set to variable //
   let characterData = res.locals.character;
@@ -21,9 +22,17 @@ module.exports.battle = (req, res) => {
 
   // handles if character wounds enemy //
   if (charFight > enemyFight && charFight > enemyArmor) {
-    const { Enemy } = req.app.get("models");
+    const { Enemy, Message } = req.app.get("models");
     Enemy.findById(enemyId)
       .then(enemy => {
+        Message.findOne({
+          where: {
+            name: "enemyWound"
+          }
+        }).then(message => {
+          res.locals.message = message;
+          console.log("wound text", res.locals.message)
+        });
         return enemy.decrement('vigor', {by:1})
       })
         .then(() => {
@@ -38,9 +47,17 @@ module.exports.battle = (req, res) => {
           }
         });
   } else if (enemyFight > charFight && enemyFight > charArmor) {
-    const { Character } = req.app.get("models");
+    const { Character, Message } = req.app.get("models");
     Character.findById(charId)
       .then(character => {
+        Message.findOne({
+          where: {
+            name: "charWound"
+          }
+        }).then(message => {
+          res.locals.message = message;
+          console.log("wound text", res.locals.message)
+        });
         return character.decrement('vigor', {by:1})
       })
       .then(() => {

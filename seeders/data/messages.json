@@ -1,0 +1,12 @@
+{
+  "messages": [
+    {
+      "name": "charWound",
+      "text": "Your enemy deals a harsh blow. You suffer one wound..."
+    },
+    {
+      "name": "enemyWound",
+      "text": "Your strike was true! Your enemy suffers one wound."
+    }
+  ]
+}

@@ -4,6 +4,7 @@ let models = require("./models");
 let { users } = require("./seeders/data/users");
 let { characters} = require("./seeders/data/characters");
 let { enemies} = require("./seeders/data/enemies");
+let { messages} = require("./seeders/data/messages");
 
 models.sequelize
   .sync({ force: true })
@@ -15,6 +16,9 @@ models.sequelize
   })
   .then((queryInterface) => {
     return models.Enemy.bulkCreate(enemies)
+  })
+  .then((queryInterface) => {
+    return models.Message.bulkCreate(messages)
   })
   .then(() => {
     process.exit();

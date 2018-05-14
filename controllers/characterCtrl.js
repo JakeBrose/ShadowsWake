@@ -75,7 +75,6 @@ module.exports.userWins = (req, res, next) => {
     raw: true
   })
     .then(characters => {
-      console.log("AAHAHAHAHAHAHAHHAHAHAHAFUCK", characters);
       req.user.wins = characters.length;
       next(user.wins)
     })
@@ -93,7 +92,6 @@ module.exports.userLosses = (req, res, next) => {
     raw: true
   })
     .then(characters => {
-      console.log("AAHAHAHAHAHAHAHHAHAHAHAFUCK", characters);
       req.user.losses = characters.length;
       next(user.losses)
     })

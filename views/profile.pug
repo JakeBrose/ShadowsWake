@@ -2,15 +2,14 @@ extends index.pug
 
 block content
 
-  div.profile
-    ul
-      h1 Player Profile
+  div
+    ul.profile
+      li Player Profile
       li= `Name: ${userData.first_name} ${userData.last_name}`
       li= `Username: ${userData.username}`
       li= `Email: ${userData.email}`
       li= `Wins: ${userData.wins}`
       li= `Losses: ${userData.losses}`
-  div.profile
-    ul
+    ul.profile
       li
         a(href="/newGame") Begin your adventure!

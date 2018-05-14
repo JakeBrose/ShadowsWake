@@ -35,6 +35,9 @@ const {
 } = require("../controllers/enemyCtrl");
 
 const { battle } = require("../controllers/battleCtrl");
+// const {
+//   getMessages
+// } = require("../controllers/messageCtrl");
 
 // New Game
 router.get("/newGame" , newGame);
@@ -43,7 +46,7 @@ router.post("/generateOrcSkirmisher", createFirstEnemy);
 // Chapter One
 router.get("/chapterOne", myCurrentCharacter, chapterOne);
 router.get("/chapterOneA", myCurrentCharacter, chapterOneA);
-router.get("/chapterOneBattle", myCurrentCharacter, getFirstEnemy, chapterOneBattle);
+router.get("/chapterOneBattle", myCurrentCharacter, getFirstEnemy, chapterOneBattle, battle);
 router.get("/battle", myCurrentCharacter, getFirstEnemy, battle);
 router.get("/battleVictory", myCurrentCharacter, battleVictory);
 // Chapter Two
