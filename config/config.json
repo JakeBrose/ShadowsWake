@@ -4,7 +4,12 @@
     "password": "e3455f2982b16563f0717e78ef656dd3e3cb0035b8445de68b08fe34021b5f39",
     "database": "df125sr0l2qd01",
     "host": "ec2-54-235-132-202.compute-1.amazonaws.com",
-    "dialect": "postgres"
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": {
+        "require": true
+      }
+    }
   },
   "test": {
     "username": "prgnuqseckchef",
