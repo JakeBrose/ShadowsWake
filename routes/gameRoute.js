@@ -34,7 +34,11 @@ const {
   getThirdEnemy
 } = require("../controllers/enemyCtrl");
 
-const { battle } = require("../controllers/battleCtrl");
+const {
+  battleOne,
+  battleTwo,
+  battleThree
+} = require("../controllers/battleCtrl");
 // const {
 //   getMessages
 // } = require("../controllers/messageCtrl");
@@ -46,22 +50,22 @@ router.post("/generateOrcSkirmisher", createFirstEnemy);
 // Chapter One
 router.get("/chapterOne", myCurrentCharacter, chapterOne);
 router.get("/chapterOneA", myCurrentCharacter, chapterOneA);
-router.get("/chapterOneBattle", myCurrentCharacter, getFirstEnemy, chapterOneBattle, battle);
-router.get("/battle", myCurrentCharacter, getFirstEnemy, battle);
+router.get("/chapterOneBattle", myCurrentCharacter, getFirstEnemy, chapterOneBattle);
+router.get("/battle", myCurrentCharacter, getFirstEnemy, battleOne);
 router.get("/battleVictory", myCurrentCharacter, battleVictory);
 // Chapter Two
 router.post("/generateSecondEnemy",createSecondEnemy);
 router.get("/chapterTwo", myCurrentCharacter, chapterTwo);
 router.get("/chapterTwoA", myCurrentCharacter, chapterTwoA);
 router.get("/chapterTwoBattle", myCurrentCharacter, getSecondEnemy, chapterTwoBattle);
-router.get("/battleTwo", myCurrentCharacter, getSecondEnemy, battle);
+router.get("/battleTwo", myCurrentCharacter, getSecondEnemy, battleTwo);
 router.get("/battleVictoryTwo", myCurrentCharacter, battleVictoryTwo);
 // Chapter Three
 router.post("/generateThirdEnemy",createThirdEnemy);
 router.get("/chapterThree", myCurrentCharacter, chapterThree);
 router.get("/chapterThreeA", myCurrentCharacter, chapterThreeA);
 router.get("/chapterThreeBattle", myCurrentCharacter, getThirdEnemy, chapterThreeBattle);
-router.get("/battleThree", myCurrentCharacter, getThirdEnemy, battle);
+router.get("/battleThree", myCurrentCharacter, getThirdEnemy, battleThree);
 router.get("/battleVictoryThree", myCurrentCharacter, battleVictoryThree);
 // win/lose //
 router.get("/characterDeath", myCurrentCharacter, death);

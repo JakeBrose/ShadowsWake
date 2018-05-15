@@ -4,17 +4,22 @@ html
     title Skirmish
     include stylesheet
     body.backgroundTwo
-    ul.character
-      li The Ashen One
-      li= `WR:${characterData.vigor}`
-      li= `FS:${characterData.fight}`
-      li= `AV:${characterData.armor}`
+    div.gridLayoutTwo
+      ul.characterBattle
+        li The Ashen One
+        li= `WR:${characterData.vigor}`
+        li= `FS:${characterData.fight}`
+        li= `AV:${characterData.armor}`
 
-    form.selectDifficulty(name="battleResults" method="GET" action="/battleTwo")
-      button.edit-submit(type="submit") Fight it out!
+      form.battleButton(name="battleResults" method="GET" action="/battleTwo")
+        button.edit-submit(type="submit") Fight it out!
 
-    ul.enemyTwo
-      li= enemyData.name
-      li= `WR:${enemyData.vigor}`
-      li= `FS:${enemyData.fight}`
-      li= `AV:${enemyData.armor}`
+      ul.enemyTwo
+        li The Pursuer
+        li= `WR:${enemyData.vigor}`
+        li= `FS:${enemyData.fight}`
+        li= `AV:${enemyData.armor}`
+
+    div.battleText
+      if message
+        p= message

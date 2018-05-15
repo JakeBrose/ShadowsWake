@@ -66,7 +66,7 @@ module.exports.youWin = (req, res, next) => {
 
 module.exports.userWins = (req, res, next) => {
   const user = req.app.get("user");
-  const { Character } = req.app.get("models");
+  const { Character, User } = req.app.get("models");
   Character.findAll({
     where:{
       win: 1,
@@ -75,15 +75,24 @@ module.exports.userWins = (req, res, next) => {
     raw: true
   })
     .then(characters => {
-      req.user.wins = characters.length;
-      next(user.wins)
+      User.findOne({
+        where: {
+          id: user.id
+        }
+      }).then(thisUser => {
+        thisUser.wins = characters.length;
+        thisUser.save()
+          .then(() => {
+            next()
+          })
+      })
     })
     .catch()
 };
 
 module.exports.userLosses = (req, res, next) => {
   const user = req.app.get("user");
-  const { Character } = req.app.get("models");
+  const { Character, User } = req.app.get("models");
   Character.findAll({
     where:{
       win: 0,
@@ -92,10 +101,19 @@ module.exports.userLosses = (req, res, next) => {
     raw: true
   })
     .then(characters => {
-      req.user.losses = characters.length;
-      next(user.losses)
+      User.findOne({
+        where: {
+          id: user.id
+        }
+      }).then(thisUser => {
+        thisUser.losses = characters.length;
+        thisUser.save()
+          .then(() => {
+            next()
+          })
+      });
+      // req.user.losses = characters.length;
+      // next(user.losses)
     })
     .catch()
 };
-
-

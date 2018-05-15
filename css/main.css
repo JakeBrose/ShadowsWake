@@ -85,6 +85,7 @@
     height: auto;
     margin: 0 auto;
 }
+
 .hrefText {
     font-family: 'Press Start 2P', cursive;
     color: gold;
@@ -94,7 +95,6 @@
     width: 200px;
     height: auto;
     margin: 0 auto;
-    background-color: hsla(50, 33%, 25%, .75);
     list-style-type: none;
 }
 
@@ -136,7 +136,7 @@
 }
 
 .buttons {
-    background-color: hsla(50, 33%, 25%, .75);
+    margin-top: 200px;
     width: 100px;
     height: 20px;
 }
@@ -146,57 +146,75 @@
 .character {
     height: 250px;
     width: 200px;
+    color: gold;
+    border: black solid 1px;
+    border-radius: 25px;
     background:
         url("https://orig00.deviantart.net/84ac/f/2016/077/6/2/dark_souls_3___red_knight_by_zedotagger-d9vknnd.gif") no-repeat;
     font-family: 'Press Start 2P', cursive;
     font-size: 10px;
     background-color: hsla(50, 33%, 25%, .75);
+    text-align: left;
+    list-style-type: none;
 }
 
 .characterBattle {
     height: 400px;
-    width: 300px;
+    width: 400px;
+    color: gold;
+    border: black solid 1px;
+    border-radius: 25px;
     background:
             url("https://orig00.deviantart.net/84ac/f/2016/077/6/2/dark_souls_3___red_knight_by_zedotagger-d9vknnd.gif") no-repeat;
     background-size: 400px;
     font-family: 'Press Start 2P', cursive;
-    font-size: 15px;
+    font-size: 20px;
     background-color: hsla(50, 33%, 25%, .75);
+    list-style-type: none;
 }
 
 .enemy {
-    height: 250px;
-    width: 200px;
+    height: 400px;
+    width: 400px;
+    color: crimson;
+    border: black solid 1px;
+    border-radius: 25px;
     background:
             url("https://78.media.tumblr.com/tumblr_lknef5fxc81qf91leo1_500.gif") no-repeat;
-    background-size: 150px;
+    background-size: 400px;
     font-family: 'Press Start 2P', cursive;
-    font-size: 10px;
+    font-size: 20px;
     background-color: hsla(50, 33%, 25%, .75);
-    text-align: end;
+    list-style-type: none;
 }
 
 .enemyTwo {
-    height: 250px;
-    width: 200px;
+    height: 400px;
+    width: 400px;
+    color: crimson;
+    border: black solid 1px;
+    border-radius: 25px;
     background:
             url("https://orig00.deviantart.net/fc49/f/2017/164/1/0/the_pursuer_by_daghosttoast-dbcl73g.gif") no-repeat;
-    background-size: 150px;
+    background-size: 400px;
     font-family: 'Press Start 2P', cursive;
-    font-size: 10px;
+    font-size: 20px;
     background-color: hsla(50, 33%, 25%, .75);
-    text-align: end;
+    list-style-type: none;
 }
 .enemyThree {
-    height: 250px;
-    width: 200px;
+    height: 400px;
+    width: 400px;
+    color: crimson;
+    border: black solid 1px;
+    border-radius: 25px;
     background:
             url("https://orig00.deviantart.net/589d/f/2015/234/d/5/dark_souls___gravelord_nito_by_zedotagger-d96sgi8.gif") no-repeat;
-    background-size: 150px;
+    background-size: 400px;
     font-family: 'Press Start 2P', cursive;
-    font-size: 10px;
+    font-size: 20px;
     background-color: hsla(50, 33%, 25%, .75);
-    text-align: end;
+    list-style-type: none;
 }
 
 /*GRID LAYOUTS*/
@@ -208,6 +226,35 @@
 
 .gridLayoutTwo {
     display: grid;
-    grid-template-columns: 600px 200px 900px;
-    grid-template-rows: 500px 200px 900px;
+    padding-left: 9%;
+    grid-template-columns: 442px 150px 500px;
+    grid-template-rows: 500px;
+}
+
+.battleButton{
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: #FC0 1px 0 10px;
+    margin-top: 150px;
+    width: 150px;
+    height: 150px;
+    border: black solid 1px;
+    border-radius: 25px;
+    background: hsla(50, 33%, 25%, .75) url("https://vignette.wikia.nocookie.net/street-fighter-sprites/images/2/26/SFA2-VS-Screen.gif/revision/latest?cb=20160804140908") no-repeat;
+    background-position: center;
+}
+
+.battleText {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 25px;
+    color: gold;
+    text-shadow: #FC0 1px 0 10px;
+    text-align: center;
+    width: 600px;
+    height: auto;
+    margin: 0 auto;
+    border: black solid 1px;
+    border-radius: 25px;
+    background-color: hsla(50, 33%, 25%, .75);
+
 }

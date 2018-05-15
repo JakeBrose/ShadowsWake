@@ -18,9 +18,8 @@ module.exports.chapterOneA = (req, res) => {
 module.exports.chapterOneBattle = (req, res) => {
   let characterData = res.locals.character;
   let enemyData = res.locals.enemy;
-  // let message = res.locals.message;
-  // console.log("THIS IS THE UPDATED MESSAGE", message);
-  res.render("ChapterOneBattle", { characterData, enemyData });
+  let message = req.query.hit;
+  res.render("ChapterOneBattle", { characterData, enemyData, message });
 };
 
 module.exports.battleVictory = (req, res) => {
@@ -43,7 +42,8 @@ module.exports.chapterTwoA = (req, res) => {
 module.exports.chapterTwoBattle = (req, res) => {
   let characterData = res.locals.character;
   let enemyData = res.locals.enemy;
-  res.render("ChapterTwoBattle", { characterData, enemyData });
+  let message = req.query.hit;
+  res.render("ChapterTwoBattle", { characterData, enemyData, message });
 };
 
 module.exports.battleVictoryTwo = (req, res) => {
@@ -67,7 +67,8 @@ module.exports.chapterThreeA = (req, res) => {
 module.exports.chapterThreeBattle = (req, res) => {
   let characterData = res.locals.character;
   let enemyData = res.locals.enemy;
-  res.render("ChapterThreeBattle", { characterData, enemyData });
+  let message = req.query.hit;
+  res.render("ChapterThreeBattle", { characterData, enemyData, message });
 };
 
 module.exports.battleVictoryThree = (req, res) => {

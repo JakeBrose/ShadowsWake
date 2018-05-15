@@ -5,7 +5,8 @@ const app = express();
 const passport = require('passport')
 const session = require('express-session');
 let bodyParser = require('body-parser');
-// flash depend on session module to set temp values that persist briefly so we can set a value, kick off a new request, then have that value accessible on the request
+// flash depends on session module to set temp values that persist briefly so we can set a value, kick off a new request, then have that value accessible on the request
+
 const flash = require('express-flash');
 
 require('dotenv').config();
@@ -26,7 +27,8 @@ let routes = require('./routes/');
 app.use(session({
   secret: 'keyboard cat',
   resave: true,
-  saveUninitialized: true
+  saveUninitialized: true,
+  cookie: { maxAge: 60000 }
 })); // session secret
 
 //execute passport strategies file
@@ -42,6 +44,7 @@ app.use( (req, res, next) => {
 });
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+// app.use(express.cookieParser('keyboard cat'));
 app.use(flash());
 
 // note that this needs to be after the above stuff

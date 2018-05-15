@@ -10,8 +10,8 @@ module.exports.myProfileView = (req, res, next) => {
   })
     .then((foundUser) => {
       let userData = foundUser.dataValues;
-      userData.wins = req.user.wins;
-      userData.losses = req.user.losses;
+      // userData.wins = req.user.wins;
+      // userData.losses = req.user.losses;
       res.render("profile", { userData });
       return next();
     });
