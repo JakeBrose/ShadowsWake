@@ -14,7 +14,7 @@ module.exports.myCurrentCharacter = (req, res, next) => {
     ]
   })
     .then((foundCharacter) => {
-      res.locals.character = foundCharacter.dataValues;
+      res.locals.character = foundCharacter;
       return next()
     });
 };
