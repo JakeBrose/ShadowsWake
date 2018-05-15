@@ -35,6 +35,7 @@
     -o-background-size: cover;
     -webkit-background-size: cover;
 }
+
 .backgroundVictory {
     background:
             url("http://i0.kym-cdn.com/photos/images/newsfeed/001/315/787/15c.gif") no-repeat center center fixed;
@@ -52,6 +53,7 @@
     -o-background-size: cover;
     -webkit-background-size: cover;
 }
+
 /* login styling*/
 .container.landing {
     text-align: center;
@@ -105,6 +107,9 @@
     background-color: hsla(50, 33%, 25%, .75);
     margin: 0 auto;
     width: 300px;
+    text-shadow: #FC0 1px 0 10px;
+    border: black solid 1px;
+    border-radius: 25px;
 }
 
 #signin {
@@ -115,11 +120,11 @@
     width: 225px;
     margin: 0 auto;
 }
+
 .loginPage {
     font-family: 'Press Start 2P', cursive;
     font-size: 15px;
     text-align: center;
-    /*background-color: hsla(50, 33%, 25%, .75);*/
     width: 225px;
     margin: 0 auto;
 }
@@ -130,9 +135,12 @@
     font-size: 12px;
     text-align: center;
     background-color: hsla(50, 33%, 25%, .75);
-    width: 300px;
+    width: 400px;
     margin: 0 auto;
     list-style-type: none;
+    text-shadow: #FC0 1px 0 10px;
+    border: black solid 1px;
+    border-radius: 25px;
 }
 
 .buttons {

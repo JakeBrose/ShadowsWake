@@ -31,7 +31,7 @@ module.exports.battleOne = (req, res) => {
           if (enemyVigor === 0 && enemyData.name === "Orc Skirmisher") {
             res.redirect("/battleVictory")
           } else {
-            let message = "You wounded your enemy!";
+            let message = "Your blade pierces the creatures flesh! The Garden of Serpents suffers 1 wound.";
             res.redirect("/ChapterOneBattle?hit=" + message)
           }
         });
@@ -45,7 +45,7 @@ module.exports.battleOne = (req, res) => {
         if (charVigor === 0) {
           res.redirect("/characterDeath")
         } else {
-          let message = "You suffered a wound!";
+          let message = "You writhe as the creature wraps its serpent arms around your torso before throwing you against a wall..You suffer 1 wound.";
           res.redirect("/ChapterOneBattle?hit=" + message);
         }
       });
@@ -53,24 +53,28 @@ module.exports.battleOne = (req, res) => {
     let caseNumber = (Math.floor(Math.random() * 4) + 1);
     switch (caseNumber) {
       case 1:
-        var message = "You charge the vile creature, but it nimbly evades your attack";
+        var message = "Alas, the vile wretch evaded your strike..";
         res.redirect("/ChapterOneBattle?hit=" + message);
         break;
       case 2:
-        var message = "The creature's serpent arms lash out at you, but you quickly dodge";
+        var message = "You raise your shield, deflecting the creatures hail of blows!";
         res.redirect("/ChapterOneBattle?hit=" + message);
         break;
       case 3:
-        var message = "You raise your shield just in time to block a flurry of strikes!";
+        var message = "You jump back as the creature advances, barely escaping a mortal blow!";
         res.redirect("/ChapterOneBattle?hit=" + message);
         break;
       case 4:
-        var message = "You see an opening to strike, but the Garden of Serpents knocks you away before you can ready your blade";
+        var message = "Both you and your adversary ready yourselves for the next attack.";
         res.redirect("/ChapterOneBattle?hit=" + message);
         break;
     }
   }
 };
+
+////////////////////////////////////////////////////////////
+//  THE SECOND BATTLE /////////////////////////////////////
+//////////////////////////////////////////////////////////
 
 module.exports.battleTwo = (req, res) => {
   // access res.locals and set to variable //
@@ -101,7 +105,7 @@ module.exports.battleTwo = (req, res) => {
         if (enemyVigor === 0 && enemyData.name === "Fell Warg") {
           res.redirect("/battleVictoryTwo")
         } else {
-          let message = "You wounded your enemy!";
+          let message = "Your strike was true! The Pursuer suffers 1 wound.";
           res.redirect("/ChapterTwoBattle?hit=" + message)
         }
       });
@@ -115,7 +119,7 @@ module.exports.battleTwo = (req, res) => {
         if (charVigor === 0) {
           res.redirect("/characterDeath")
         } else {
-          let message = "You suffered a wound!";
+          let message = "You feel The Pursuer's blade cut into your flesh..You suffer 1 wound.";
           res.redirect("/ChapterTwoBattle?hit=" + message);
         }
       });
@@ -123,24 +127,28 @@ module.exports.battleTwo = (req, res) => {
     let caseNumber = (Math.floor(Math.random() * 4) + 1);
     switch (caseNumber) {
       case 1:
-        var message = "You charge the vile creature, but it nimbly evades your attack";
+        var message = "The sound of steel clashing rings out as you exchange blows!";
         res.redirect("/ChapterTwoBattle?hit=" + message);
         break;
       case 2:
-        var message = "The creature's serpent arms lash out at you, but you quickly dodge";
+        var message = "The Pursuer raises his giant blade high and you ready yourself for the assault.";
         res.redirect("/ChapterTwoBattle?hit=" + message);
         break;
       case 3:
-        var message = "You raise your shield just in time to block a flurry of strikes!";
+        var message = "The Pursuer charges you, but your perfectly timed parry staggers the wretched fool!";
         res.redirect("/ChapterTwoBattle?hit=" + message);
         break;
       case 4:
-        var message = "You see an opening to strike, but the Garden of Serpents knocks you away before you can ready your blade";
+        var message = "Your blades clash together, neither of you willing relinquish the bind!";
         res.redirect("/ChapterTwoBattle?hit=" + message);
         break;
     }
   }
 };
+
+////////////////////////////////////////////////////////////
+//  THE THIRD BATTLE  /////////////////////////////////////
+//////////////////////////////////////////////////////////
 
 module.exports.battleThree = (req, res) => {
   // access res.locals and set to variable //
@@ -171,7 +179,7 @@ module.exports.battleThree = (req, res) => {
         if (enemyVigor === 0 && enemyData.name === "The Dwimmerlaik") {
           res.redirect("/battleVictoryThree")
         } else {
-          let message = "You wounded your enemy!";
+          let message = "You bring your sword down upon your foe! The Gravelord's Shade suffers 1 wound.";
           res.redirect("/ChapterThreeBattle?hit=" + message)
         }
       });
@@ -185,7 +193,7 @@ module.exports.battleThree = (req, res) => {
         if (charVigor === 0) {
           res.redirect("/characterDeath")
         } else {
-          let message = "You suffered a wound!";
+          let message = "The Gravelord's Scythe rips into your flesh! You suffer 1 wound.";
           res.redirect("/ChapterThreeBattle?hit=" + message);
         }
       });
@@ -193,11 +201,11 @@ module.exports.battleThree = (req, res) => {
     let caseNumber = (Math.floor(Math.random() * 4) + 1);
     switch (caseNumber) {
       case 1:
-        var message = "You charge the vile creature, but it nimbly evades your attack";
+        var message = "The Gravelord swings its' mighty scythe, but you dodge just in time.";
         res.redirect("/ChapterThreeBattle?hit=" + message);
         break;
       case 2:
-        var message = "The creature's serpent arms lash out at you, but you quickly dodge";
+        var message = "The sound of steel and bone clashing rings out as you exchange blows!";
         res.redirect("/ChapterThreeBattle?hit=" + message);
         break;
       case 3:
@@ -205,7 +213,7 @@ module.exports.battleThree = (req, res) => {
         res.redirect("/ChapterThreeBattle?hit=" + message);
         break;
       case 4:
-        var message = "You see an opening to strike, but the Garden of Serpents knocks you away before you can ready your blade";
+        var message = "You see an opening to strike, but the Gravelord's Shade knocks you away before you can ready your blade";
         res.redirect("/ChapterThreeBattle?hit=" + message);
         break;
     }

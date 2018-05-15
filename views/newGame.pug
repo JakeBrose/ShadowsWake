@@ -17,7 +17,7 @@ html
       |Nameless, accursed Undead, unfit even to be cinder. And so it is, that ash seeketh embers.
   div.formText
     form.selectDifficulty(name="selectDifficultyEasy" method="POST" action="/newGame")
-      h3 Easy
+      h3 Playing for the story
         br
         label WR
           input(type="text" name="vigor"  value="6" readonly)
@@ -30,7 +30,7 @@ html
           br
         button.edit-submit(type="submit") Select
     form.selectDifficulty(name="selectDifficultyMedium" method="POST" action="/newGame")
-      h3 Medium
+      h3 Want a challenge
         br
         label WR
         input(type="text" name="vigor"  value="6" readonly)
@@ -43,7 +43,7 @@ html
         br
         button.edit-submit(type="submit") Select
     form.selectDifficulty(name="selectDifficultyHard" method="POST" action="/newGame")
-      h3 Hard
+      h3 Prepare to die
         br
         label WS
         input(type="text" name="vigor"  value="5" readonly)
@@ -55,7 +55,7 @@ html
         input(type="text" name="armor" value="4" readonly)
         br
         button.edit-submit(type="submit") Select
-    form.firstEnemyGenerator(name="generateEnemies" method="POST" action="/generateOrcSkirmisher")
+    form.hrefText(name="generateEnemies" method="POST" action="/generateOrcSkirmisher")
       input(type="hidden" name="vigor"  value="8" readonly)
       input(type="hidden" name="fight" value="2" readonly)
       input(type="hidden" name="armor" value="2" readonly)
