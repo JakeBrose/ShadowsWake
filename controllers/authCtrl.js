@@ -25,7 +25,7 @@ module.exports.register = (req, res, next) => {
         // using https://www.npmjs.com/package/express-flash-2 docs, but installed express-flash
         req.flash('registerMsg', `Thanks for signing up, ${user.first_name}!`);
         // Redirect kicks off a new request and makes the route in the URL match the location we have sent the user to. That's why we have to create a flash message so it will persist through the new request of the welcome route
-        res.redirect('/profile');
+        res.redirect('/');
       });
     })(req, res, next);
   } else {
